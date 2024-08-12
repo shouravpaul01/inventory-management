@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.my-container {
+    @apply w-full max-w-5xl mx-auto 
+  }
+  
+  @keyframes custom-animation {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-custom {
+    animation: custom-animation 0.5s ease-in-out;
+  }
+  
+  .parallelogram-clip-path {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    background-color: rgb(196 181 253);
+    z-index: 1;
+  }
+  
+  .active-link-signin {
+    @apply btn btn-sm btn-primary rounded-full w-full
+  }
+  
+  /* .menu-item:hover{
+      @apply block border-b-2 border-red-700   font-bold 
+    } */
+  /* .nav{
+    @apply w-full
+  } */
+  
+  .nav:hover {
+    @apply max-h-min
+  }
+  
+  .nav-item {
+    @apply px-0 md:px-2 relative
+  }
+  
+  .nav-item:hover {
+    @apply text-white
+  }
+  
+  .nav-active-link::before {
+    @apply content-[''] w-full absolute -bottom-[10px] left-0 right-0  h-[2px] bg-white
+  }
+  
+  .mobile-menu-active-link {
+    @apply bg-indigo-500 text-white
+  }
+  
+  /* Dashboard */
+  .menu-item {
+    @apply p-4 text-base-content space-y-1
+  }
+  
+  .menu-item li a {
+    @apply flex items-center gap-2 hover:bg-violet-700 hover:text-white rounded-md py-2 px-3
+  }
+  
+  .menu-item-active {
+    @apply bg-violet-700 text-white
+  }
