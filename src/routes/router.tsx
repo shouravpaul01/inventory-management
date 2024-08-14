@@ -5,6 +5,7 @@ import HomePage from '../pages/home/HomePage'
 import FacultyPage from '../pages/faculty/FacultyPage'
 import UserPage from "../pages/user/UserPage";
 import CategoryPage from "../pages/category/CategoryPage";
+import SubCategoryPage from '../pages/sub-category/SubCategoryPage'
 
 
  const router = createBrowserRouter([
@@ -27,6 +28,10 @@ import CategoryPage from "../pages/category/CategoryPage";
       {
       path:"/categories",
       element:<CategoryPage />
+      },
+      {
+      path:"/sub-categories",
+      element:<SubCategoryPage />
       }
     ]
   },

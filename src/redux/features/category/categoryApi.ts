@@ -17,13 +17,7 @@ const categoryApi = baseApi.injectEndpoints({
       }),
       providesTags: ["categories"],
     }),
-    getSingleCategory: build.query({
-      query: (query) => ({
-        url: `/categories/single-category/${query.categoryId}`,
-        method: "GET",
-      }),
-     providesTags:["categories"]
-    }),
+    
     updateCategory: build.mutation({
       query: (data) => ({
         url: `/categories/${data._id}`,
@@ -39,13 +33,19 @@ const categoryApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ["categories"],
     }),
+    getAllActiveCategories: build.query({
+      query: (query) => ({
+        url: `/categories/all-active`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
 export const {
   useCreateCategoryMutation,
   useGetAllCategoriesQuery,
-  useGetSingleCategoryQuery,
   useUpdateCategoryMutation,
-  useUpdateCategoryActiveStatusMutation
+  useUpdateCategoryActiveStatusMutation,
+  useGetAllActiveCategoriesQuery
 } = categoryApi;

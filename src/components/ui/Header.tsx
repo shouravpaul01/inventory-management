@@ -62,6 +62,7 @@ const handleSearchSubmit = (e: React.FormEvent) => {
                             <NavLink to={'/my-accessories'} onClick={() => handleLogout()} ><FaArrowRightFromBracket />Logout</NavLink>
 
                         </li>
+                        
                     </ul>
                 }
             </div>
@@ -134,6 +135,7 @@ const handleSearchSubmit = (e: React.FormEvent) => {
                         <NavLink to={"/users"} className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline btn-primary'}>Users</NavLink>
                         <NavLink to={"/faculty"} className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline btn-primary'}>Faculty</NavLink>
                         <NavLink to={"/categories"} className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline btn-primary'}>Categories</NavLink>
+                        <NavLink to={"/sub-categories"} className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline btn-primary'}>Sub Categories</NavLink>
                         </div>
                         {/* Mobile menu Navbar */}
                         <div className="w-full flex lg:hidden justify-center items-center">

@@ -1,18 +1,19 @@
 import { useState } from "react";
-import { useGetAllCategoriesQuery } from "../../redux/features/category/categoryApi";
+import { useGetAllSubCategoriesQuery } from "../../redux/features/sub-category/subCategoryApi";
 import { FaPlus } from "react-icons/fa6";
 import InputSearch from "../../components/ui/InputSearch";
-import CategoriesTable from "../../components/table/CategoriesTable";
+import SubCategoriesTable from "../../components/table/SubCategoriesTable";
 import Pagination from "../../components/ui/Pagination";
 import Modal from "../../components/ui/Modal";
-import CategoryForm from "../../components/form/CategoryForm";
+import SubCategoryForm from "../../components/form/SubCategoryForm";
 import Loading from "../../components/ui/Loading";
 
-const CategoryPage = () => {
+
+const SubCategoryPage = () => {
   const [modalId, setModalId] = useState("");
   const [searchInputValue, setSearchInputValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const { data: categories, isLoading } = useGetAllCategoriesQuery({
+  const { data: subCategories, isLoading } = useGetAllSubCategoriesQuery({
     search: searchInputValue,
     page: currentPage,
   });
@@ -44,26 +45,26 @@ const CategoryPage = () => {
             />
           </div>
 
-          <CategoriesTable categories={categories?.data?.data} />
+          <SubCategoriesTable subCategories={subCategories?.data?.data} />
 
           <div className="px-2 py-3">
             <Pagination
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
-              totalPages={categories?.data?.totalPages}
+              totalPages={subCategories?.data?.totalPages}
             />
           </div>
         </div>
       </div>
       <Modal
         modalId={modalId}
-        modalTitle="Create Category"
+        modalTitle="Create Sub Category"
         hanleCloseModal={handleCloseModal}
       >
-        <CategoryForm />
+        <SubCategoryForm />
       </Modal>
     </>
   );
 };
 
-export default CategoryPage;
+export default SubCategoryPage;
