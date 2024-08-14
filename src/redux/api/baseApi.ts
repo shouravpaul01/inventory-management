@@ -5,6 +5,6 @@ const baseUrl="http://localhost:3000/api/v1"
 export const baseApi = createApi({
   reducerPath: 'baseApi',
   baseQuery: fetchBaseQuery({ baseUrl: baseUrl}),
-  tagTypes:["users","faculty-members"],
+  tagTypes:["users","faculty-members","categories","sub-categories"],
   endpoints: () => ({}),
 })

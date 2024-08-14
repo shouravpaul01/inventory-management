@@ -4,6 +4,7 @@ import MainLayout from "../components/loyout/MainLayout";
 import HomePage from '../pages/home/HomePage'
 import FacultyPage from '../pages/faculty/FacultyPage'
 import UserPage from "../pages/user/UserPage";
+import CategoryPage from "../pages/category/CategoryPage";
 
 
  const router = createBrowserRouter([
@@ -22,6 +23,10 @@ import UserPage from "../pages/user/UserPage";
       {
       path:"/faculty",
       element:<FacultyPage />
+      },
+      {
+      path:"/categories",
+      element:<CategoryPage />
       }
     ]
   },

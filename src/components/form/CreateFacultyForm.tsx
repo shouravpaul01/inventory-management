@@ -16,12 +16,9 @@ const CreateFacultyForm = () => {
         register,
         handleSubmit,
         reset,
-        control,
-        watch,
-        setValue,
         setError,
         formState: { errors },
-      } = useForm({resolver: yupResolver(createFacultyValidation),});
+      } = useForm({resolver: yupResolver(createFacultyValidation)});
       const [createFaculty]=useCreateFacultyMutation()
     
       const handleSignUp= async(data:TFaculty) => {

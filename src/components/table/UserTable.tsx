@@ -81,7 +81,7 @@ const UserTable = ({ users }: { users: TFaculty[] }) => {
                   <div className="flex items-center gap-1">
                     <FaCircleDot
                       className={`${
-                        member?.user?.isApproved ? "text-success" : "text-error"
+                        member?.user?.isActive ? "text-success" : "text-error"
                       }`}
                     />
                     <span className="font-bold">

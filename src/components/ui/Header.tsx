@@ -1,7 +1,7 @@
 import {  NavLink, useLocation, useNavigate,  } from "react-router-dom";
 import { FaAngleDown, FaAngleUp, FaArrowRightFromBracket, FaBars, FaBoxOpen, FaCubesStacked, FaHouse, FaRegCircleUser,  } from "react-icons/fa6";
 import React, { useState } from "react";
-import julogo from '/ju-logo.png'
+import julogo from '/ju-logo-big.png'
 
 import InputSearch from "./InputSearch";
 
@@ -130,9 +130,10 @@ const handleSearchSubmit = (e: React.FormEvent) => {
                             </div>
                         </div>
                         <div className="my-5 space-x-2">
-                        <NavLink to={"/category"} className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline btn-primary'}>Category</NavLink>
+                        
                         <NavLink to={"/users"} className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline btn-primary'}>Users</NavLink>
                         <NavLink to={"/faculty"} className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline btn-primary'}>Faculty</NavLink>
+                        <NavLink to={"/categories"} className={({ isActive }) => isActive ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline btn-primary'}>Categories</NavLink>
                         </div>
                         {/* Mobile menu Navbar */}
                         <div className="w-full flex lg:hidden justify-center items-center">
